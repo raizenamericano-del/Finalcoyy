@@ -2155,17 +2155,11 @@ html[data-theme="light"] .hero-kicker-row .hero-badge {
 @keyframes hvcSheen { 0%, 55% { transform: translateX(-110%); } 85%, 100% { transform: translateX(110%); } }
 
 /* ---------- HUD tactical di tiap section-head ---------- */
-.section-head { position: relative; padding-right: 76px; }
-.section-head::after {
-  content: attr(data-hud); position: absolute; top: 50%; right: 0;
-  transform: translateY(-50%);
-  font-family: 'JetBrains Mono', monospace; font-size: .72rem; letter-spacing: 2px;
-  color: var(--muted); border: 1px dashed var(--border); border-radius: 10px;
-  padding: 6px 10px; background: var(--glass);
-}
+.section-head { position: relative; }
 .section-head::before {
-  content: ''; position: absolute; left: 0; bottom: -10px; height: 2px; width: 128px;
-  background: linear-gradient(90deg, #ef4444, transparent);
+  content: ''; position: absolute; left: 50%; transform: translateX(-50%);
+  bottom: -10px; height: 2px; width: 64px;
+  background: linear-gradient(90deg, transparent, #ef4444, transparent);
   border-radius: 2px;
 }
 
@@ -2367,3 +2361,7 @@ html[data-theme="light"] .sp-pack:hover, html[data-theme="light"] .sp-pack.picke
 html[data-theme="light"] .gm-img { box-shadow: 0 10px 24px -12px rgba(0,0,0,.3); }
 html[data-theme="light"] .f100-final { background: linear-gradient(90deg, #1c1917, #b91c1c); -webkit-background-clip: text; background-clip: text; }
 html[data-theme="light"] .short-card-link { color: #b91c1c; }
+/* v5.3: rapelin kartu info pengunjung (IP/kota kepotong) */
+#infIp { word-break: break-all; font-size: .85rem; line-height: 1.45; font-variant-numeric: tabular-nums; }
+#infCity { overflow-wrap: anywhere; line-height: 1.45; font-size: .9rem; }
+.info-card > div { min-width: 0; flex: 1; }
