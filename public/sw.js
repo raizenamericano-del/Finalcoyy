@@ -2,7 +2,7 @@
    Bikin portal ini kebuka kenceng & tetep nyala walau sinyal lemot.
    Ganti CACHE_NAME tiap update gede biar user auto dapet versi baru. */
 
-const CACHE_NAME = 'kyy-static-v5.2';
+const CACHE_NAME = 'kyy-static-v5.3';
 const PRECACHE = [
   '/',
   '/index.html',
